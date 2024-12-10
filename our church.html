@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+	<html>
+
+		<head>
+		
+			<title> our church </title>
+		
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+			<style> 
+		
+				* {
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+					}
+					
+				body {
+					background: #FFFFFF;
+					min-height: 100vh;
+					overflow-x: hidden;
+					}
+					
+				header {
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 30px 100px;
+					justify-content: space-between;
+					align-items: center;
+					z-index: 100;
+					color: #FFFFFF;
+					}
+					
+				.logo {
+					font-size: 2em;
+					color: #fff;
+					}
+					
+				.church {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 400px;
+					}
+					
+				.church img{
+					position: absolute;
+					top: 0;
+					Left: 0;	
+					width: 100%;
+					height: 100%;
+					objective-fit: cover;
+					}
+
+				.church h1 {
+					color: #FFFFFF;
+					font-family: arial;
+					-webkit-text-stroke-width: 1px;
+					-webkit-text-stroke-color: #666565;
+					}
+
+				#text {
+					position: absolute;
+					font-size: 60px;
+					color: #000000;
+					}
+					
+				.church class {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					pointer-events: none;
+					}
+					
+				.sec {
+					position: relative;
+					background:#F2ECE7;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					padding-left: 70px;
+					height: auto;
+					}
+				
+				.sec h1 {
+					font-size: 45px;
+					font-family: arial;
+					}
+					
+				.sec h2 {
+					font-size: 30px;
+					font-family: arial;
+					}
+					
+				.sec h3 {
+					font-size: 20px;
+					font-family: arial;
+					color: #3D3D3B;
+					}
+				
+				.sec img {
+					border-radius: 20px;
+					}
+
+				.block {
+					background: #F2ECE7;
+					float: left;
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					}
+				
+				.view {
+					width: 850px;
+					display: flex;
+					margin-top: 50px;
+					}
+										
+				.view img {
+					border-radius: 20px;
+					}
+				
+						
+				.last {
+					background: #E2D5D5;
+					padding: 20px;
+					}
+					
+				.last h3 {
+					font-size: 20px;
+					color: #3D3D3B;
+					}
+
+				@keyframes appear {
+					from {
+						opacity: 0;
+						filter: blur (100px);
+						transition: all 1s;
+						clip-path: inset(100% 100% 0 0);
+						}
+						
+					to {
+						opacity: 1;
+						filter: blur (0px);
+						clip-path: inset(0 0 0 0);
+						}
+				}			
+	
+				.block {
+					animation: appear linear;
+					animation-timeline: view();
+					animation-range: entry 0% cover 40%;
+					}
+				
+			</style> 
+			
+			
+			
+			
+		</head>
+	
+	
+	
+		<body>
+		
+			<header>
+				<a href="test.html"><img src = "home.png" 
+					title = "San Vincente" 
+					height = "80"> </a> <br>
+				<h1 style="font-size: 15px;" > <b> San Vincente </b> </h1>
+				<p> Ferrer Parish- </p> 	
+				<br>
+			</header>
+		
+			<section class = "church">
+				<img src = "https://z-p3-scontent.fmnl9-7.fna.fbcdn.net/v/t1.15752-9/462584035_1231620807936988_2875415458587675193_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHIQ0r8ir3E9_T-QK0FuNB3Qpud0ZAKtndCm53RkAq2d0pzvQJeLMBktR9fwUHT3x5F4EBI07u6sdGkUhStbxW3&_nc_ohc=pB4CIy1nX2YQ7kNvgGKRZKg&_nc_zt=23&_nc_ht=z-p3-scontent.fmnl9-7.fna&oh=03_Q7cD1QH7TieZseqe3YzdSKvL7iQTsP8nnwswhppFRYdaxrCUGg&oe=6776267C" id = "layerOne" width = "1520px" height = "500px">
+				<img src = "left.png" id = "layerTwo">
+				<img src = "right.png" id = "layerThree">	
+				<h1 id = "text"> Welcome to our church </h1> 				
+			</section>
+			
+			<section class = "sec">
+				<h1>San Vicente Ferrer Parish Taguig City</h1> 
+				
+				<br>
+				
+				<h3> Our Church
+				San Vicente Ferrer Parish is a sacred space rooted in faith and tradition. 
+				Named after Saint Vincent Ferrer, the patron saint of builders and preachers, 
+				our church stands as a beacon of hope and community in Taguig, Philippines.
+				</h3>
+				
+				<br>
+				
+				<h3>
+				We are dedicated to fostering a welcoming environment where parishioners can grow spiritually, 
+				celebrate the sacraments, and partake in meaningful worship. Located in Palar Village, Barangay
+				Pinagsama, our church is a place of gathering, reflection, and service, committed to sharing the 
+				love of Christ with all who enter.
+				</h3>
+				
+				<center>
+				<section class = "view"> 					
+					<div class = "block"> 
+						<img src = "https://tinyurl.com/yf2cn3sx" id = "imageOne" width = "200px">
+					</div>
+					
+					<div class = "block"> 
+						<img src = "https://tinyurl.com/5t4djj3b" id = "imageTwo" width = "200">  
+					</div>
+				
+					<div class = "block">
+						<img src = "https://tinyurl.com/3ek9rtmn" id = "imageThree" width = "200px"> 
+					</div>
+				</section>
+			</section>
+			
+			
+					
+			<section class = "last">
+				<center>
+				<h3> Our mission is to inspire faith, serve others, and build a strong, united community under 
+				the guidance and protection of Our Lord and the intercession of Saint Vincent Ferrer. </h3>
+				
+			</section>	
+  
+			
+			<footer style = "background-color: #2a2832;">
+				<div style = "color: #FFFFFF; padding:40px;">
+					San Vincente <br>
+					Church <br>
+					<br>
+					ADDRESS <br>
+					<p>Palar Village, Barangay Pinagsama 1201 Taguig, Philipines </p> <br>
+					CONTACT <br>
+					<p>sanvincenteferrer.parinh1995@gmail.com </p>
+				</div>
+			</footer>
+			
+			<script> 
+			let text = document.getElementById("text");
+			let layer = document.getElementById("layerOne");
+			let layer2 = document.getElementById("layerTwo");
+			let layer3 = document.getElementById("layerThree");
+
+			window.addEventListener('scroll', () => {
+			let value = window.scrollY;
+			let op = 1;
+			
+			text.style.marginTop = value * 2.5 + 'px';
+			
+			if (window.pageYOffset > 300) {
+				text.style.opacity = 0
+			} else {
+				text.style.opacity = 1;
+			}
+			layer2.style.left = value * -1.5 + 'px';
+			layer3.style.left = value * 1.5 + 'px';
+			});
+			</script>
+			
+		</body>
+		
+	</html>

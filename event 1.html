@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+	<html>
+
+		<head>
+		
+			<title> Event 1 </title>
+			
+			<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+			<style> 
+			                                        
+				 * {
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+					}
+					
+				body {
+					background-color: #fff;
+					min-height: 100vh;
+					overflow-x: hidden;
+					}
+					
+				header {
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 30px 100px;
+					font-family: arial;
+					justify-content: space-between;
+					align-items: center;
+					z-index: 100;
+					}
+   
+                 .logo {
+					font-size: 2em;
+					color: #fff;
+					}
+					
+				.church {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 400px;
+					}
+					
+				.church h1 {
+					color: #FFFFFF;
+					font-family: arial;
+					-webkit-text-stroke-width: 1px;
+					-webkit-text-stroke-color: #666565;
+					}
+
+				.church img{
+					position: absolute;
+					top: 0;
+					Left: 0;	
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					}
+
+					
+				#text {
+					position: absolute;
+					font-size: 60px;
+					}
+
+                .sec {
+					position: relative;
+					background:#F2ECE7;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					padding-left: 70px;
+					padding-right: 70px;
+					height: auto;
+					}
+					
+				.sec h1 {
+					font-size: 45px;
+					font-family: arial;
+					color: #242220;
+					}
+					
+				.sec h2 {
+					font-size: 25px;
+					font-family: arial;
+					color: #242220;
+					}
+					
+				.sec h3 {
+					font-size: 20px;
+					font-family: arial;
+					color: #666565;
+					}
+
+				.sec img {
+					border-radius: 20px;
+					}
+				
+				.block {
+					background: #F2ECE7;
+					float: left;
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					}
+					
+				.view {
+					width: 850px;
+					display: flex;
+					margin-top: 50px;
+					}                        
+                                              
+				.last {
+					background: #E2D5D5;
+					padding: 35px;
+					}
+					
+				.last h1 {
+					font-size: 20px;
+					font-family: arial;
+					color: #666565;
+					}
+
+				@keyframes appear {
+					from {
+						opacity: 0;
+						filter: blur (100px);
+						transition: all 1s;
+						clip-path: inset(100% 100% 0 0);
+						}
+						
+					to {
+						opacity: 1;
+						filter: blur (0px);
+						clip-path: inset(0 0 0 0);
+						}
+				}				
+	  
+	
+				.block {
+					animation: appear linear;
+					animation-timeline: view();
+					animation-range: entry 0% cover 40%;
+					}
+                                          
+           	</style> 
+			
+		</head>
+	
+	
+	
+		<body>
+		
+			<header>
+				<a href="test.html"><img src = "home.png" 
+					title = "San Vincente" 
+					height = "80"></a> <br>
+				<h1 style = "font-size: 15px;" > <b> San Vincente </b> </h1>
+				<p> Ferrer Parish- </p> 	
+				<br>
+			</header>
+		
+            <section class = "church">
+				<img src = "https://tinyurl.com/6nja9mpk" id = "layerOne" >	
+				<h1 id = "text">  San Vicente Ferrer Parish Taguig City Events</h1> 				
+			</section>
+			
+			<section class = "sec">
+				<h1> SVFParish Medical & Dental Mission </h1> 
+				
+				<br>
+				
+				<h2> <strong> September 29, 2024 </strong> </h2>
+				
+				<br>
+			
+				<h3> The Dental and Medical Mission is a vital outreach initiative that addresses the 
+				pressing health needs of the community, particularly for those with limited access to 
+				essential care. By providing free medical consultations, dental check-ups, and basic 
+				treatments, it ensures that individuals and families receive professional and compassionate 
+				support regardless of their circumstances. </h3>
+				
+				<br>
+				
+				<h3> This mission goes beyond addressing immediate health concerns; it promotes preventive 
+				care and empowers participants with knowledge to maintain their well-being. Rooted in the 
+				spirit of service and love, the initiative fosters a stronger, healthier community while 
+				reflecting the church’s commitment to holistic care—nurturing both the physical and spiritual
+				well-being of all. “Love & Service to the people of God. Mission accomplished. Congratulations 
+				and gratitude to all our volunteers who made this event possible. Your gift of self has great 
+				impact to our lives. God bless you and your family. TJis dental mission </h3>
+
+				<center>
+				<section class = "view">
+				
+					<div class = "block"> 
+						<img src = "https://tinyurl.com/yp5um9z9" id = "imageOne" width = "200px" >
+					</div>
+					
+					<div class = "block"> 
+						<img src = "https://tinyurl.com/488ka7rp" id = "imageTwo" width = "200px">  
+					</div>
+					
+					<div class = "block">
+						<img src = "https://tinyurl.com/4ndw562x" id = "imageThree" width = "200px"> 
+					</div>
+				</section>
+			</section>
+                                 
+			<section class = "last">
+				<center>
+				<h1> The Events section highlights the spiritual and community activities at San Vincente Ferrer Parish.
+                From monthly gatherings to special feast day celebrations, this is your guide to staying engaged with the
+                parish's vibrant schedule. Whether you're joining us for prayers, processions, or fellowship, these events
+                are an opportunity to deepen your faith and connect with others in our community. Keep an eye on this section
+                to stay updated on upcoming occasions and participate in the life of our parish. </h1>
+			</section>	
+                                   
+			<footer style = "background-color: #2a2832;">
+				<div style = "color: #FFFFFF; padding:40px;">
+					San Vincente <br>
+					Church <br>
+					<br>
+					ADDRESS <br>
+					<p> Palar Village, Barangay Pinagsama 1201 Taguig, Philipines </p> <br>
+					CONTACT <br>
+					<p>sanvincenteferrer.parinh1995@gmail.com </p>
+				</div>
+			</footer>
+
+			<script>
+				let text = document.getElementById("text");
+				let layer = document.getElementById("layerOne");
+				let layer2 = document.getElementById("layerTwo");
+				let layer3 = document.getElementById("layerThree");
+	
+				window.addEventListener('scroll', () => {
+					let value = window.scrollY;
+					let op = 1;
+				
+				text.style.marginTop = value * 2.5 + 'px';
+			
+					if (window.pageYOffset > 300) {
+						text.style.opacity = 0
+					} else {
+						text.style.opacity = 1;
+					}
+					
+				layer2.style.left = value * -1.5 + 'px';
+				layer3.style.left = value * 1.5 + 'px';
+				});
+			</script>
+			
+		</body>
+		
+	</html>

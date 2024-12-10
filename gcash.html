@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gcash</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+	  font-family: Arial;
+    }
+
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 30px 100px;
+      font-family: Arial, sans-serif;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 2em;
+      color: #fff;
+    }
+
+    .wrapper {
+      position: relative;
+      height: auto;
+    }
+
+    .church {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+    }
+
+    .church img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .church h1 {
+      color: #FFFFFF;
+      font-family: Arial, sans-serif;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #666565;
+    }
+
+    #text {
+      position: absolute;
+      font-size: 60px;
+      color: #FFFFFF;
+    }
+
+    .secOver {
+      position: absolute;
+      top: 300px;
+      left: 0;
+      right: 0;
+      margin-left: 50px;
+      margin-right: 50px;
+      background: #f2ece7;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-left: 100px;
+      padding-right: 100px;
+      width: auto;
+      height: auto;
+    }
+
+    .secOver h1 {
+      font-size: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .secOver h2 {
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      color: #3D3D3B;
+    }
+
+    .secOver h3 {
+      font-size: 10px;
+      font-family: Arial, sans-serif;
+      color: #3D3D3B;
+    }
+
+    .form-box {
+      position: relative;
+      display: flex;
+      width: 512px;
+      height: 650px;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .login-container {
+      position: absolute;
+      margin-top: auto;
+      left: 4px;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      transition: .5s ease-in-out;
+    }
+
+    .top {
+      font-size: small;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .button-box {
+      width: 300px;
+      height: 30px;
+      margin: 15px;
+      position: relative;
+      font-family: Arial, sans-serif;
+      border-radius: 10px;
+      background-color: #E2D5D5;
+      border-color: #E2D5D5;
+    }
+
+    .fire-btn {
+      font-weight: 500;
+      font-family: Arial, sans-serif;
+      color: black;
+      height: 45px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+	   margin-top: 20px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: .3s ease-in-out;
+    }
+
+    .fire-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .top span {
+      color: #F2ECE7;
+      font-size: small;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .top span a {
+      font-weight: 500;
+      color: #fff;
+      margin-left: 5px;
+    }
+
+    .two-forms {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-field {
+      font-size: 15px;
+      background-color: #E2D5D5;
+      height: 50px;
+      width: 100%;
+      padding: 0 10px 0 45px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      transition: .2s ease;
+    }
+
+    .input-field:hover,
+    .input-field:focus {
+      background-color: white;
+      color: #000000;
+      opacity: 0.25;
+    }
+
+    ::-webkit-input-placeholder {
+      font-family: Arial, sans-serif;
+      color: #0000000;
+    }
+
+    .input-box i {
+      left: 17px;
+      color: #fff;
+    }
+
+    @media only screen and (max-width: 540px) {
+      .wrapper {
+        min-height: 100vh;
+      }
+
+      .form-box {
+        width: 100%;
+        height: 500px;
+      }
+
+      .register-container,
+      .login-container {
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      .register-container .two-forms {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="test.html"><img src = "home.png" 
+      title = "San Vincente" 
+      height = "80"> </a> <br>
+    <h1 style="font-size: 15px;"><b> San Vincente </b></h1>
+    <p> Ferrer Parish- </p>
+    <br>
+  </header>
+
+  <section class="church">
+    <img src="https://tinyurl.com/8hznkmdz" id="layerOne" width="1520px" height="500px">
+    <h1 id="text"> Alkansya ni San Vincente Ferrer </h1>
+  </section>
+
+  <div class="secOver">
+    <a href="form of payment.html">
+      <h3> ✦.── back to form of payment </h3>
+    </a>
+    <center>
+      <div class="form-box">
+        <div class="login-container">
+          <div class="top">
+            <h2> Send your donation here! </h2>
+          </div>
+
+          <div class="value">
+            <center>
+              <img src="http://surl.li/ufmzou" style="height:550px">
+            </center>
+          </div>
+
+          <button class="fire-btn" onclick="finish()">Finish</button>
+
+        </div>
+      </div>
+    </center>
+  </div>
+
+  <footer style="background-color: #2a2832; margin-top: 630px;">
+    <div style="color: #FFFFFF; padding: 40px;">
+      San Vincente <br>
+      Church <br>
+      <br>
+      ADDRESS <br>
+      <p> Palar Village, Barangay Pinagsama 1201 Taguig, Philippines </p> <br>
+      CONTACT <br>
+      <p>sanvincenteferrer.parinh1995@gmail.com </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+  <script>
+    function finish() {
+      alert("Your donation has been recorded! We appreciate your donation");
+      
+      confetti({
+        particleCount: 300,
+        spread: 90,
+        origin: { x: 1, y: 0.9 },
+      });
+
+      confetti({
+        particleCount: 300,
+        spread: 90,
+        origin: { x: 0, y: 0.9 },
+      });
+    }
+
+    let text = document.getElementById("text");
+    let layer = document.getElementById("layerOne");
+
+    window.addEventListener('scroll', () => {
+      let value = window.scrollY;
+      text.style.marginTop = value * 2.5 + 'px';
+      text.style.opacity = window.pageYOffset > 150 ? 0 : 1;
+    });
+  </script>
+
+</body>
+
+</html>

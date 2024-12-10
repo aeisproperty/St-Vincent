@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>form of payment</title>
+	
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Arial;
+				}
+
+			body {
+				background: #ffffff;
+				min-height: 100vh;
+				overflow-x: hidden;
+				}
+
+			header {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 30px 100px;
+				justify-content: space-between;
+				align-items: center;
+				z-index: 100;
+				}
+
+			.logo {
+				font-size: 2em;
+				color: #fff;
+				}
+
+			.wrapper {
+				position: relative;
+				height: auto;
+				}
+	
+			.church {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 400px;				
+				}
+					
+			.church img{
+				position: absolute;
+				top: 0;
+				Left: 0;	
+				width: 100%;
+				height: 100%;
+				objective-fit: cover;
+				}
+					
+			.church h1 {
+				color: #FFFFFF;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: #666565;
+				}
+
+			#text {
+				position: absolute;
+				font-size: 60px;
+				color: #FFFFFF;
+				}
+				
+			.secOver {
+				position: absolute;
+				top: 300px;
+				left: 0;
+				right: 0;
+				margin-left: 50px;
+				margin-right: 50px;
+				background: #f2ece7;
+				padding-top: 30px;
+				padding-bottom: 20px;
+				padding-left: 100px;
+				padding-right: 100px;
+				width: auto;
+				height: auto;
+				}
+
+			.secOver h1 {
+				font-size: 30px;
+				font-family: arial;
+				}
+			
+			.secOver h2 {
+				font-size: 15px;
+				font-family: arial;
+				color: #3D3D3B;
+				}
+			
+			.secOver h3 {
+				font-size: 10px;
+				font-family: arial;
+				color: #3D3D3B;
+				}
+
+			.form-box {
+				position: relative;
+				display: flex;
+				width: 512px;
+				height: 650px;
+				overflow: hidden;
+				z-index: 2;
+				}
+
+			.login-container {
+				position: absolute;
+				margin-top: auto;
+				left: 4px;
+				width: 500px;
+				display: flex;
+				flex-direction: column;
+				transition: .5s ease-in-out;
+				}
+
+			.register-container {
+				position: absolute;
+				right: -520px;
+				width: 500px;
+				display: flex;
+				flex-direction: column;
+				transition: .5s ease-in-out;
+				}
+
+			.top {
+				font-size: small;
+				padding: 10px 0;
+				display: flex;
+				justify-content: center;
+				}
+
+			.button-box {
+				width: 300px;
+				height: 30px;
+				margin: 15px;
+				position: relative;
+				font-family: arial;
+				border-radius: 10px;
+				background-color: #E2D5D5;
+				border-color: #E2D5D5;
+				}
+
+			.toggle-btn {
+				padding: 10px 40px;
+				cursor: pointer;
+				background: transparent;
+				border: 0;
+				outline: none;
+				position: relative;
+				text-align: center;
+				}
+
+			#btn {
+				left: 0;
+				top: 0;
+				position: absolute;
+				margin: 2px;
+				width: 130px;
+				height: 87%;
+				background: #FFFFFF;
+				border-radius: 10px;
+				transition: .5s;
+				}
+				
+			.value{
+				width: auto;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: 10px;
+				}
+
+			.money {
+				color: #3D3D3B;
+				background-color: #FFFFFF;
+				height: 50px;
+				width: 300px;
+				border-radius: 6px;
+				border: none;
+				}
+	
+			.money:hover {
+				background-color: #E2D5D5;
+				color: #000000;
+				opacity:  0.5;
+				}
+				
+			.input-box {
+				margin-bottom: 10px;
+				margin-top: 10px
+				}
+				
+			.top span{
+				color: #F2ECE7;
+				font-size: small;
+				padding: 10px 0;
+				display: flex;
+				justify-content: center;
+				}
+			
+			.top span a{
+				font-weight: 500;
+				color: #fff;
+				margin-left: 5px;
+				}
+			
+			.two-forms{
+				display: flex;
+				gap: 10px;
+				}
+
+			.input-field{
+				font-size: 15px;
+				background-color: #E2D5D5;
+				height: 50px;
+				width: 100%;
+				padding: 0 10px 0 45px;
+				border: none;
+				border-radius: 10px;
+				outline: none;
+				transition:.2s ease;
+				}
+			
+			.input-field:hover, .input-field:focus{
+				background-color: white;
+				color: #000000;
+				opacity:  0.25;
+				}
+			
+			::-webkit-input-placeholder{
+				font-family: arial;
+				color: #000000;
+				}
+
+			.input-box i{
+				position: relative;
+				top: -35px;
+				left: 17px;
+				color: #fff;
+				}
+			
+			.submit{
+				font-size: 15px;
+				font-weight: 500;
+				font-family: arial;
+				color: black;
+				height: 45px;
+				width: 100%;
+				border: none;
+				border-radius: 10px;
+				outline: none;
+				background: rgba(255, 255, 255, 0.7);
+				cursor: pointer;
+				transition: .3s ease-in-out;
+				}
+
+			.submit:hover{
+				background: rgba(255, 255, 255, 0.5);
+				box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+				}
+			
+			.two-col{
+				display: flex;
+				justify-content: space-between;
+				color: #3D3D3B;
+				font-size: small;
+				font-family: arial;
+				margin-top: 10px;
+				}
+			
+			.two-col .one{
+				display: flex;
+				gap: 5px;
+				}
+
+			.two label a{
+				text-decoration: none;
+				font-family: arial;
+				color: #3D3D3B;
+				}
+	
+			.two label a:hover{
+				text-decoration: underline;
+				}
+			
+			
+			@media only screen and (max-width: 540px) {
+				.wrapper{
+				min-height: 100vh;
+				}
+			
+			.form-box{
+				width: 100%;
+				height: 500px;
+				}
+			
+			.register-container, .login-container{
+				width: 100%;
+				padding: 0 20px;
+				}
+			
+			.register-container .two-forms{
+				flex-direction: column;
+				gap: 0;
+				}
+
+		</style>
+	</head>
+
+	<body>
+
+		<header>
+				<a href="test.html"><img src = "home.png" 
+					title = "San Vincente" 
+					height = "80"> </a> <br>
+				<h1 style="font-size: 15px;" > <b> San Vincente </b> </h1>
+				<p> Ferrer Parish- </p> 	
+				<br>
+			</header>
+
+			<section class = "church">
+				<img src = "https://tinyurl.com/8hznkmdz" id = "layerOne" width = "1520px" height = "500px">
+				<h1 id = "text"> Alkansya ni San Vincente Ferrer </h1> 
+			</section>
+	
+				<div class="secOver">
+					<a href="main.html"> <h3> ✦.── Back to main donation page </h3> </a>
+					<center>
+						<div class="form-box">
+							<div class="login-container">
+								
+								<div class="top"> 
+									<h2> My information </h2>
+								</div>
+								
+								<div class="input-box">
+									<input type="text" class="input-field" placeholder="First name">
+								</div>
+							
+								<div class="input-box">
+									<input type="text" class="input-field" placeholder="Last name">
+								</div>
+                            
+								<div class="input-box">
+									<input type="text" class="input-field" placeholder="Email">
+								</div>
+
+								<div class="input-box">
+									<input type="password" class="input-field" placeholder="Password">
+								</div>
+								
+								<div class="input-box">
+									<input type="submit" class="submit" value="Register">
+								</div>
+                            
+								<div class="two-col">
+									<div class="one">
+										<input type="checkbox" id="register-check">
+										<label for="register-check">Remember Me</label>
+									</div>
+									
+									<div class="two">
+                                    <label><a href="terms and conditions.html">Terms & conditions</a></label>
+									</div>
+								</div>
+								
+								<br>
+								<hr>
+								<div class="top"> 
+									<h2> Select form of payment </h2>
+								</div>
+								
+								<div class="value">
+									<a href = "gcash.html">
+										<button type="button" class="money" onclick="gcash()">
+											<img src ="http://surl.li/aqrgsg" style = "height:20px"> 
+										</button>
+									</a>
+								</div>
+							
+							<div class="value">
+								<a href = "bdo.html">
+									<button type="button" class="money" onclick="bdo()"> 
+										<img src ="http://surl.li/kehdcu" style = "height:20px">
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</center>
+			</div>
+				
+		
+		<footer style = "background-color: #2a2832; margin-top: 630px;" >
+				<div style = "color: #FFFFFF; padding:40px;">
+					San Vincente <br>
+					Church <br>
+					<br>
+					ADDRESS <br>
+					<p> Palar Village, Barangay Pinagsama 1201 Taguig, Philipines </p> <br>
+					CONTACT <br>
+					<p>sanvincenteferrer.parinh1995@gmail.com </p>
+				</div>
+		</footer>
+
+
+
+		<script>
+		
+			let text = document.getElementById("text");
+			let layer = document.getElementById("layerOne");
+				
+	
+			window.addEventListener('scroll', () => {
+				let value = window.scrollY;
+				let op = 1;
+				
+			text.style.marginTop = value * 2.5 + 'px';		
+				if (window.pageYOffset > 150) {
+					text.style.opacity = 0
+				} else {
+					text.style.opacity = 1;
+				}});
+				
+		</script>
+
+	</body>
+
+</html>
